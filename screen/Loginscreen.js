@@ -9,13 +9,14 @@ import {
   TextInput,
   Pressable,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import React from "react";
 
 const Loginscreen = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
-
+const navigation = useNavigation()
  const handelsubmit = ()=>{
     console.log({email})
     console.log({password})
@@ -105,7 +106,10 @@ const Loginscreen = () => {
         >
           <Text style={{color:"white",fontSize:20}}>Login</Text>
         </Pressable>
+        <Pressable onPress={()=>navigation.navigate("Register")}>
+
         <Text style={{textAlign:"center",color:"grey"}} >Oops don't have an account ?</Text>
+        </Pressable>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

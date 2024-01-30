@@ -1,13 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Loginscreen from './screen/Loginscreen';
+
+import StackNavigator from './Navigation/StackNavigator';
 
 export default function App() {
   return (
     <>
       
-      <Loginscreen/>
-      <StatusBar style="auto" />
+      {/* <Loginscreen/> */}
+{/* <Text>jjdddddddddddddd</Text> */}
+
+      <StackNavigator/>
     </>
   );
 }
